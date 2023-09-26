@@ -1,0 +1,20 @@
+<h1>ข้อมูลผู้จัดจำหน่าย</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">รหัสตัวแทนจัดจำหน่าย</th>
+        <th scope="col">ชื่อตัวแทนจัดจำหน่าย</th>
+        <th scope="col">ที่อยู่</th>
+        <th scope="col">เบอร์โทรศัพท์</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let dealerData of read_dealer_Data">
+          <th scope="row">{{dealerData.dealer_id}}</th>
+          <td>{{dealerData.dealer_name}}</td>
+          <td>{{dealerData.address}}</td>
+          <td>{{dealerData.tel}}</td>
+      </tr>
+    </tbody>
+  </table>

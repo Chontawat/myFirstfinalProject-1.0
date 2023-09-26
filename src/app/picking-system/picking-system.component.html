@@ -1,0 +1,75 @@
+<form>
+    <label>รหัสเบิกสินค้า:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label>รหัสล็อตสินค้า:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label>รหัสสินค้า:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label>ชื่อสินค้า:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label>พนักงานที่เบิก:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label>วันที่เบิก:</label><br>
+    <input type="date" id="lname" name="lname"><br>
+
+    <label>จำนวนที่เบิก:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label>ราคา:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <br>
+
+    <button type="button" class="btn btn-primary">ทำการเบิกสินค้า</button>&nbsp;
+    <button type="button" class="btn btn-warning">ยกเลิก</button>
+  </form>
+
+
+<h1>ข้อมูลสินค้าคงเหลือ</h1>
+<table class="table float-left">
+    <thead>
+      <tr>
+        <th scope="col">รหัสสินค้า</th>
+        <th scope="col">ชื่อสินค้า</th>
+        <th scope="col">ประเภทสินค้า</th>
+        <th scope="col">ตัวแทนจัดจำหน่าย</th>
+        <th scope="col">ราคา</th>
+        <th scope="col">หน่วยนับ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let rec of readproductData">
+          <th scope="row">{{rec.product_id}}</th>
+          <td>{{rec.product_name}}</td>
+          <td>{{rec.Tproduct_id}}</td>
+          <td>{{rec.dealer_id}}</td>
+          <td>{{rec.price}}</td>
+          <td>{{rec.c_unit}}</td>
+      </tr>      
+    </tbody>
+</table>
+
+<h1>สินค้าที่ต้องการเบิก</h1>
+<table class="table float-left">
+    <thead>
+      <tr>
+        <th scope="col">รหัสเบิกสินค้า</th>
+        <th scope="col">รหัสล็อตสินค้า</th>
+        <th scope="col">รหัสสินค้า</th>
+        <th scope="col">ชื่อสินค้า</th>
+        <th scope="col">พนักงานที่เบิก</th>
+        <th scope="col">วันที่เบิก</th>
+        <th scope="col">ราคา/หน่วย</th>
+        <th scope="col">ราคาทั้งหมด</th>
+    </thead>
+    <tbody>
+      <tr>
+        
+      </tr>      
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+<!-- show message -->
+<div *ngIf="sucessmsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{sucessmsg}}</strong>
+  <button type="button" class="btclose" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<h1>ข้อมูลสินค้า</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">รหัสสินค้า</th>
+      <th scope="col">ชื่อสินค้า</th>
+      <th scope="col">ประเภทสินค้า</th>
+      <th scope="col">ตัวแทนจัดจำหน่าย</th>
+      <th scope="col">ราคา</th>
+      <th scope="col">หน่วยนับ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rec of readproductData">
+      <th scope="row">{{rec.product_id}}</th>
+      <td>{{rec.product_name}}</td>
+      <td>{{rec.Tproduct_name}}</td>
+      <td>{{rec.dealer_name}}</td>
+      <td>{{rec.price}}</td>
+      <td>{{rec.c_unit}}</td>
+      <td><button class="btn btn-sm btn-danger" (click)="deleteProductID(rec.product_id)">Delete</button>
+        &nbsp;
+        <a [routerLink]="['/CreateProduct',rec.product_id]" class="btn btn-sm btn-success">Update</a>
+      </td>
+      &nbsp;
+    </tr>
+  </tbody>
+  <div class="center">
+    <a [routerLink]="['/CreateProduct']" class="btn btn-success">เพิ่มข้อมูล</a>
+  </div>
+</table>

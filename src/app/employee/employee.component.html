@@ -1,0 +1,20 @@
+<h1>ข้อมูลพนักงาน</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">รหัสพนักงาน</th>
+        <th scope="col">ชื่อพนักงาน</th>
+        <th scope="col">ที่อยู่</th>
+        <th scope="col">เบอร์โทร</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr *ngFor="let rec of readempData">
+          <th scope="row">{{rec.employee_id}}</th>
+          <td>{{rec.employee_name}}</td>
+          <td>{{rec.address}}</td>
+          <td>{{rec.tel}}</td>
+      </tr>      
+    </tbody>
+</table>
